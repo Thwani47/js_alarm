@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Alarm Clock</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script type="text/javascript" src="alarm.js"></script>
+    
+</head>
+<body>
+        <!-- px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" -->
+    <div class="container" >
+            <div class="pricing-header text-center">
+                    <h1 class="display-4">Alarm Clock</h1>
+                </div>
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                    <h3 class="display-5" id="currDate"></h3>
+                </div>
+            <div class="card-deck mb-1 text-center">
+                <div class="card mb-4 box-shadow"style="height: 8rem">
+                  <div class="card-header">
+                    <h4 class="my-0 font-weight-normal" >Hour</h4>
+                </div>
+                <div class="card-body">
+                        <h1 id="currHour" class="card-title pricing-card-title"></h1> 
+                 </div>
+            </div>
+            <div class="card mb-4 box-shadow" style="height: 8rem">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Minutes</h4>
+                    </div>
+                    <div class="card-body">
+                            <h1 id="currMin" class="card-title pricing-card-title"></h1> 
+                     </div>
+            </div>
+            <div class="card mb-4 box-shadow" style="height: 8rem">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Sec</h4>
+                    </div>
+                    <div class="card-body">
+                            <h1 id="currSec" class="card-title pricing-card-title"></h1> 
+                     </div>
+            </div>
+        </div>
+        <div class="pricing-header  text-center">
+                <h3 class="display-5" >Set Alarm</h3>
+            </div>
+        <div class="card-deck mb-1 text-center">
+                <div class="card mb-4 box-shadow" style="height: 8rem">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">Date</h4>
+                        </div>
+                        <div class="card-body">
+                            <input type="date" id="datepicker" class="form-control"value="2018-01-01" >
+                            
+                         </div>
+                </div>
+            <div class="card mb-4 box-shadow"style="height: 8rem">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal" >Hour</h4>
+                </div>
+                <div class="card-body">
+                       <select id="hourPicker" class="form-control dropup selectpicker" data-live-search="true" data-dropup-auto="true">
+                           <option value="00">00</option>
+                           <option value="01">01</option>
+                           <option value="02">02</option>
+                           <option value="03">03</option>
+                           <option value="04">04</option>
+                           <option value="05">05</option>
+                           <option value="06">06</option>
+                           <option value="07">07</option>
+                           <option value="08">08</option>
+                           <option value="09">09</option>
+                           <option value="10">10</option>
+                           <option value="11">11</option>
+                           <option value="12">12</option>
+                           <option value="13">13</option>
+                           <option value="14">14</option>
+                           <option value="15">15</option>
+                           <option value="16">16</option>
+                           <option value="17">17</option>
+                           <option value="18">18</option>
+                           <option value="19">19</option>
+                           <option value="20">20</option>
+                           <option value="21">21</option>
+                           <option value="22">22</option>
+                           <option value="23">23</option>
+                       </select>
+                 </div>
+            </div>
+            <div class="card mb-4 box-shadow" style="height: 8rem;">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Minutes</h4>
+                    </div>
+                    <div class="card-body">
+                            <select id="minPicker" class="form-control dropup selectpicker" data-live-search="true" data-dropup-auto="true">
+                                    <option value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                    <option value="32">32</option>
+                                    <option value="33">33</option>
+                                    <option value="34">34</option>
+                                    <option value="35">35</option>
+                                    <option value="36">36</option>
+                                    <option value="37">37</option>
+                                    <option value="38">38</option>
+                                    <option value="39">39</option>
+                                    <option value="40">40</option>
+                                    <option value="41">41</option>
+                                    <option value="42">42</option>
+                                    <option value="43">43</option>
+                                    <option value="44">44</option>
+                                    <option value="45">45</option>
+                                    <option value="46">46</option>
+                                    <option value="47">47</option>
+                                    <option value="48">48</option>
+                                    <option value="49">49</option>
+                                    <option value="50">50</option>
+                                    <option value="51">51</option>
+                                    <option value="52">52</option>
+                                    <option value="53">53</option>
+                                    <option value="54">54</option>
+                                    <option value="55">55</option>
+                                    <option value="56">56</option>
+                                    <option value="57">57</option>
+                                    <option value="58">58</option>
+                                    <option value="59">59</option>
+                                </select>
+                     </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 m-x-auto">
+            <div class="btn-group " style="width:100px;">
+                <button type="button" class=" btn btn-success btn-primary btn-large center-block " id="setAlarm">Set Alarm</button>
+                <button type="button" class=" btn btn-success btn-primary btn-large " id="stopAlarm" style="display:none;">Stop Alarm</button>
+            </div>
+     
+        
+        </div>
+        <div class="col-md-4 m-x-auto">
+                <select id="tone_selection"class="form-control dropup selectpicker">
+                        <option value="alarm" selected="selected">Alarm</option>
+                        <option value="apple_tone">Apple Ringtone</option>
+                        <option value="warning_tone">Warning</option>
+                        <option value="awesome_morning">Awesome Morning</option>
+                        <option value="best">Best Wake Up Tone</option>
+                        <option value="extreme">Extreme Clock</option>
+                        <option value="fajar">Fajar Alarm</option>
+                        <option value="get">Get Out Of Bed</option>
+                        <option value="said">I Said Wake Up</option>
+                        <option value="mom">Mom Alert</option>
+                        <option value="morning">Morning Alarm</option>
+                        <option value="nice">Nice Wake Up Tone</option>
+                        <option value="russian">Russian Electro</option>
+                        <option value="sweet">Sweet SMS</option>
+                        <option value="wake">Wake Up Dummy</option>
+                        
+                        
+                </select> 
+                <a href="#" title="Test the Sound" id="test_start">
+                    <svg viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg" class="svg-icon icon-play-circle"
+                        style="width:20px; display:inline"
+                    >
+                        <path d="M12 2c6.625 0 12 5.375 12 12s-5.375 12-12 12-12-5.375-12-12 5.375-12 12-12zM18 
+                        14.859c0.313-0.172 0.5-0.5 0.5-0.859s-0.187-0.688-0.5-0.859l-8.5-5c-0.297-0.187-0.688-0.187-1-0.016-0.313 
+                        0.187-0.5 0.516-0.5 0.875v10c0 0.359 0.187 0.688 0.5 0.875 0.156 0.078 0.328 0.125 0.5 0.125s0.344-0.047 0.5-0.141z">
+                        </path>
+                    </svg>
+                </a>
+                <a href="#" title="Stop Testing" id="test_stop">
+                    <svg  viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg" class="svg-icon icon-stop"
+                    style="width:20px; display:inline"
+                    >
+                        <path d="M24 3v22c0 0.547-0.453 1-1 1h-22c-0.547 0-1-0.453-1-1v-22c0-0.547 0.453-1 1-1h22c0.547 
+                        0 1 0.453 1 1z">
+                        </path>
+                    </svg>
+                </a>
+                <audio id="audio" disabled="false" >
+                        Your browser does not support the <code>audio</code> element.
+                        <!-- <source id="audio_source" > -->
+                </audio>
+        </div>
+    </div>
+
+        <div class="pricing-header  text-center">
+                <h3 class="display-5" >Remaining time:</h3>
+            </div>
+            
+    <div class="card-deck mb-1 text-center">
+            <div class="card mb-4 box-shadow"style="height: 8rem">
+                    <div class="card-header">
+                      <h4 class="my-0 font-weight-normal" >Days</h4>
+                  </div>
+                  <div class="card-body">
+                          <h1 id="remDays" class="card-title pricing-card-title"></h1> 
+                   </div>
+                   </div>
+        <div class="card mb-4 box-shadow"style="height: 8rem">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal" >Hours</h4>
+        </div>
+        <div class="card-body">
+                <h1 id="remHours" class="card-title pricing-card-title"></h1> 
+         </div>
+    </div>
+    <div class="card mb-4 box-shadow" style="height: 8rem">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Minutes</h4>
+            </div>
+            <div class="card-body">
+                    <h1 id="remMin" class="card-title pricing-card-title"></h1> 
+             </div>
+    </div>
+    <div class="card mb-4 box-shadow" style="height: 8rem">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Sec</h4>
+            </div>
+            <div class="card-body">
+                    <h1 id="remSec" class="card-title pricing-card-title"></h1> 
+             </div>
+    </div>
+</div>
+
+<footer class="page-footer font-small blue pt-4 mt-4">
+        <div class="footer-copyright py-3 text-center">
+                <div class="container-fluid">
+                    © 2018 Copyright: <a href="https://github.com/Thulani47"> Thulani Sithole </a>
+        
+                </div>
+            </div>
+</footer>
+</body>
+</html>
